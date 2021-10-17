@@ -11,10 +11,11 @@ function App() {
   );
 }
 
-function FuncComp() {
+function FuncComp(props) {
   return(
     <div className="container">
         <h2>function style component</h2>
+        <p>Number: {props.initNumber}</p>
     </div>
   );
 }
