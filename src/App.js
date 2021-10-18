@@ -32,16 +32,23 @@ function FuncComp(props) {
 
 class ClassComp extends React.Component{
   state = {
-    number:this.props.initNumber
+    number:this.props.initNumber,
+    date:(new Date()).toString()
   }
   render() {
     return (
         <div className="container">
             <h2>class style component</h2>
             <p>Number: {this.state.number}</p>
+            <p>date : {this.state.date}</p>
             <input type="button" value="random" onClick={
               function(e){
                 this.setState({ number:Math.random() });
+              }.bind(this)
+            }></input>
+            <input type="button" value="date" onClick={
+              function(e){
+                this.setState({ date:(new Date()).toString()});
               }.bind(this)
             }></input>
         </div>
