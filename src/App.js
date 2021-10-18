@@ -52,6 +52,7 @@ class ClassComp extends React.Component{
     console.log('%cclass => componentWillMount', classStyle);
   }
   render() {
+    console.log('%cclass => render', classStyle);
     return (
         <div className="container">
             <h2>class style component</h2>
