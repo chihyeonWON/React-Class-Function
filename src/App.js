@@ -51,7 +51,7 @@ class ClassComp extends React.Component{
         <div className="container">
             <h2>class style component</h2>
             <p>Number: {this.state.number}</p>
-            <p>date : {this.state.date}</p>
+            <p>Date : {this.state.date}</p>
             <input type="button" value="random" onClick={
               function(e){
                 this.setState({ number:Math.random() });
