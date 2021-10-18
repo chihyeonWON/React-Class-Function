@@ -61,6 +61,9 @@ class ClassComp extends React.Component{
   componentWillUpdate(nextProps, nextState) {
     console.log('%cclass => componentWillUpdate', classStyle);
   }
+  componentDidUpdate(nextProps, nextState) {
+    console.log('%cclass => componentDidUpdate', classStyle);
+  }
   render() {
     console.log('%cclass => render', classStyle);
     return (
