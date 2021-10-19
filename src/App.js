@@ -24,12 +24,12 @@ function FuncComp(props) {
 
   //side effect (부수 효과)
   useEffect(function(){
-    console.log('%cfunc => useEffect (componentDidMount & componentDidUpdate) ' +(++funcId), funcStyle);
-    document.title = number + ':' + _date;
+    console.log('%cfunc => useEffect number (componentDidMount & componentDidUpdate) ' +(++funcId), funcStyle);
+    document.title = number;
     return function(){
-      console.log('%cfunc => useEffect return (componentDidMount & componentDidUpdate) ' +(++funcId), funcStyle);
+      console.log('%cfunc => useEffect number return (componentDidMount & componentDidUpdate) ' +(++funcId), funcStyle);
     }
-  });
+  }, [number]);
   console.log('%cfunc => render' +(++funcId), funcStyle);
 
   return(
