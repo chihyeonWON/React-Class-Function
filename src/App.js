@@ -21,6 +21,8 @@ function FuncComp(props) {
   //var dateState = useState((new Date()).toString());
   //var _date = dateState[0];
   //var setDate = dateState[1];
+
+  //side effect (부수 효과)
   useEffect(function(){
     console.log('%cfunc => useEffect (componentDidMount & componentDidUpdate) ' +(++funcId), funcStyle);
   });
