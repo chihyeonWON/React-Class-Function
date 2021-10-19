@@ -10,7 +10,8 @@ function App() {
     </div>
   );
 }
-
+var funcStyle = 'color:blue';
+var funcId = 0;
 function FuncComp(props) {
   var numberState = useState(props.initNumber);
   var number = numberState[0];
@@ -21,7 +22,7 @@ function FuncComp(props) {
   //var _date = dateState[0];
   //var setDate = dateState[1];
 
-  console.log('numberState', numberState);
+  console.log('%cfunc => render' +(++funcId), funcStyle);
 
   return(
     <div className="container">
