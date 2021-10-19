@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
@@ -21,7 +21,9 @@ function FuncComp(props) {
   //var dateState = useState((new Date()).toString());
   //var _date = dateState[0];
   //var setDate = dateState[1];
-
+  useEffect(function(){
+    console.log('%cfunc => useEffect (componentDidMount & componentDidUpdate) ' +(++funcId), funcStyle);
+  });
   console.log('%cfunc => render' +(++funcId), funcStyle);
 
   return(
