@@ -25,6 +25,7 @@ function FuncComp(props) {
   //side effect (부수 효과)
   useEffect(function(){
     console.log('%cfunc => useEffect (componentDidMount & componentDidUpdate) ' +(++funcId), funcStyle);
+    document.title = number + ':' + _date;
   });
   console.log('%cfunc => render' +(++funcId), funcStyle);
 
