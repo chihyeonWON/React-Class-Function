@@ -38,6 +38,14 @@ function FuncComp(props) {
       console.log('%cfunc => useEffect _date return (componentDidMount & componentDidUpdate) ' +(++funcId), funcStyle);
     }
   }, [_date]);
+
+  useEffect(function(){
+    console.log('%cfunc => useEffect (componentDidMount)) ' +(++funcId), funcStyle);
+    document.title = number;
+    return function(){
+      console.log('%cfunc => useEffect return (componentWillUnMount)' +(++funcId), funcStyle);
+    }
+  }, []);
   console.log('%cfunc => render' +(++funcId), funcStyle);
 
   return(
